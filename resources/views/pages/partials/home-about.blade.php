@@ -35,6 +35,9 @@
                                 <p>I can help you plan, design, and build intuitive and interactive web sites and services, to drive your online presence in engaging your customers.</p>
                             </div>
                             <!-- features-box end  -->
+                            @if($projectsCount > 0)
+                                <a href="{{ route('portfolio') }}" class="btn float-btn flat-btn color-btn">My Portfolio</a>
+                            @endif
                         </div>
                     </div>
                     <!-- features-box-container end  -->

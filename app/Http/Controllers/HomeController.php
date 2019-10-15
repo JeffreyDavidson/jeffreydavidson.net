@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
+
 class HomeController extends Controller
 {
     /**
@@ -11,6 +13,8 @@ class HomeController extends Controller
      */
     public function __invoke()
     {
-        return view('pages.home');
+        $featuredProjects = Project::where('is_featured', true)->get();
+
+        return view('pages.home', compact('featuredProjects'));
     }
 }
