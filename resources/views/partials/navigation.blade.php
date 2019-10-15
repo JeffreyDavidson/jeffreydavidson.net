@@ -36,6 +36,9 @@
         <nav class="nav-inner sound-nav" id="menu">
             <ul>
                 <li><a href="{{ route('home') }}" class="act-link">Home</a></li>
+                @if($projectsCount > 0)
+                    <li><a href="{{ route('portfolio') }}" class="act-link">Projects</a></li>
+                @endif
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
