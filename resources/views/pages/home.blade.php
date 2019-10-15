@@ -15,12 +15,6 @@
             <li><a class="scroll-link" href="#sec2">About</a></li>
             <li><a class="scroll-link" href="#sec3">Resume</a></li>
             <li><a class="scroll-link" href="#sec4">Skills</a></li>
-            @if ($featuredProjects->isNotEmpty())
-                <li><a class="scroll-link" href="#sec5">Projects</a></li>
-            @endif
-            @if ($testimonials->isNotEmpty())
-                <li><a class="scroll-link" href="#sec6">Testimonials</a></li>
-            @endif
             <li><a class="scroll-link" href="#sec7">How I Work</a></li>
         </ul>
     </nav>
@@ -41,14 +35,6 @@
     @include('pages.partials.home-numbers')
 
     @include('pages.partials.home-resume')
-
-    @if($featuredProjects->isNotEmpty())
-        @include('pages.partials.home-featured-projects')
-    @endif
-
-    @if($testimonials->isNotEmpty())
-        @include('pages.partials.home-testimonials')
-    @endif
 
     @include('pages.partials.home-video-presentation')
 
