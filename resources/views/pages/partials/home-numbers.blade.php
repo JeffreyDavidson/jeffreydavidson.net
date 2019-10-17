@@ -13,7 +13,7 @@
                 <div class="inline-facts">
                     <div class="milestone-counter">
                         <div class="stats animaper">
-                            <div class="num" data-content="0" data-num="7967986">0</div>
+                            <div class="num" data-content="0" data-num="{{ $linesOfCodeWritten }}">0</div>
                         </div>
                     </div>
                     <h6>Lines of Code Churned</h6>
@@ -25,7 +25,7 @@
                 <div class="inline-facts">
                     <div class="milestone-counter">
                         <div class="stats animaper">
-                            <div class="num" data-content="0" data-num="578343">0</div>
+                            <div class="num" data-content="0" data-num="{{ $sleepHoursLost }}">0</div>
                         </div>
                     </div>
                     <h6>Hours of Lost Sleep</h6>
@@ -37,7 +37,7 @@
                 <div class="inline-facts">
                     <div class="milestone-counter">
                         <div class="stats animaper">
-                            <div class="num" data-content="0" data-num="24453">0</div>
+                            <div class="num" data-content="0" data-num="{{ $coffeeCups }}">0</div>
                         </div>
                     </div>
                     <h6>Coffee Cups</h6>
