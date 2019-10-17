@@ -36,7 +36,7 @@
                 @include('partials.footer')
                 <!-- footer end-->
                 <!-- contact-btn -->
-                <a class="contact-btn color-bg" href="#"><i class="fal fa-envelope"></i><span>Get in Touch</span></a>
+                <a class="contact-btn color-bg" href="{{ route('contact') }}"><i class="fal fa-envelope"></i><span>Get in Touch</span></a>
                 <!-- contact-btn end -->
             </div>
             <!--   content end -->
