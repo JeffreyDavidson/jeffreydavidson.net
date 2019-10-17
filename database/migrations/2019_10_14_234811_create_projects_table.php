@@ -21,7 +21,7 @@ class CreateProjectsTable extends Migration
             $table->text('description');
             $table->string('url');
             $table->boolean('is_featured')->default(false);
-            $table->datetime('completed_at');
+            $table->datetime('completed_at')->nullable();
             $table->text('review')->nullable();
             $table->timestamps();
         });
