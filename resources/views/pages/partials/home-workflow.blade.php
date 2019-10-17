@@ -28,7 +28,7 @@
                     <h4>Develop & elaborate</h4>
                     <div class="process-details">
                         <h6>Getting down to business</h6>
-                        <p>This is where I will start your project and keep you apraised throughout the entire development of your project.</p>
+                        <p>This is where I will start your project and keep you involved throughout the entire development of your project.</p>
                     </div>
                     <span class="process-numder">02.</span>
                 </li>
