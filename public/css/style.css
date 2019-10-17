@@ -1065,11 +1065,11 @@ p.interact,
 	float: left;
 }
 .color-btn {
-	color: #fff;
+	color: #2a2a2e;
 	border-color: transparent
 }
 .btn.color-btn:before {
-	background: #fff;
+	background: #2a2a2e;
 }
 .btn:before {
 	content: '';
