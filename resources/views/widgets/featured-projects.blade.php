@@ -2,7 +2,7 @@
 <section class="dark-bg" id="sec4">
     <div class="fet_pr-carousel-title">
         <div class="fet_pr-carousel-title-item">
-            <h3>My Featured Projects</h3>
+            <h3>{{ $title }}</h3>
             <a href="{{ route('portfolio') }}" class="btn float-btn flat-btn color-btn mar-top">My Portfolio</a>
         </div>
     </div>
