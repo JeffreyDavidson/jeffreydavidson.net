@@ -499,35 +499,7 @@ blockquote p {
 	z-index: 10;
 	top: 180px;
 }
-.nav-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 98;
-	width: 100%;
-	background: rgba(37, 36, 37, 0.71);
-	cursor: none;
-	display: none;
-	-webkit-transform: translate3d(0, 0, 0);
-}
-.nav-overlay .tooltip {
-	width: 150px;
-	height: 50px;
-	line-height: 50px;
-	font-weight: 600;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	z-index: 100;
-	font-size: 10px;
-	display: none;
-}
-.nav-overlay:hover .tooltip {
-	display: block;
-	position: fixed;
-	overflow: hidden;
-}
+
 nav.nav-inner {
 	float: left;
 	overflow: hidden;
