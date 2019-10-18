@@ -14,9 +14,7 @@
             <li><a class="scroll-link act-link" href="#sec1">Hero</a></li>
             <li><a class="scroll-link" href="#sec2">About</a></li>
             <li><a class="scroll-link" href="#sec3">Resume</a></li>
-            @if($featuredProjects->isNotEmpty())
-                <li><a class="scroll-link" href="#sec4">Featured Projects</a></li>
-            @endif
+            <li><a class="scroll-link" href="#sec4">Featured Projects</a></li>
             <li><a class="scroll-link" href="#sec7">How I Work</a></li>
         </ul>
     </nav>
@@ -38,11 +36,9 @@
 
     @include('pages.partials.home-resume')
 
-    @if($featuredProjects->isNotEmpty())
-        @include('pages.partials.home-featured-projects')
-    @else
-        @include('pages.partials.home-video-presentation')
-    @endif
+    @widget('FeaturedProjects')
+
+    @include('pages.partials.home-video-presentation')
 
     @include('pages.partials.home-workflow')
 
