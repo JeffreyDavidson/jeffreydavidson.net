@@ -27,9 +27,6 @@
 </header>
 <!--  header end -->
 <!--  navigation bar -->
-<div class="nav-overlay">
-    <div class="tooltip color-bg">Close Menu</div>
-</div>
 <div class="nav-holder">
     <div class="nav-title"><span>Menu</span></div>
     <div class="nav-inner-wrap">
