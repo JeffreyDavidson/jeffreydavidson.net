@@ -32,7 +32,7 @@
 
     @include('pages.partials.home-about')
 
-    @include('pages.partials.home-numbers')
+    @widget('Numbers')
 
     @include('pages.partials.home-resume')
 
