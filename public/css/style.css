@@ -5290,31 +5290,6 @@ section.parallax-section .section-title:before {
 	height: 18%;
 	background: rgba(255, 255, 255, 0.05)
 }
-.close-share {
-	position: absolute;
-	right: 20%;
-	top: 80px;
-	margin-right: -50px;
-	z-index: 10;
-	cursor: pointer;
-	padding: 10px 90px;
-	border: 1px solid rgba(255, 255, 255, 0.21);
-}
-.close-share i {
-	font-size: 26px;
-	color: #fff;
-}
-.close-share span {
-	color: rgba(255, 255, 255, 0.91);
-	font-weight: 600;
-	text-transform: uppercase;
-	font-size: 10px;
-	letter-spacing: 4px;
-	position: relative;
-	float: left;
-	padding-right: 30px;
-	top: 6px;
-}
 .share-container {
 	margin-top: 50px;
 	z-index: 100;
@@ -6462,11 +6437,6 @@ section.parallax-section .section-title:before {
 	}
 	.share-container {
 		top: 150px;
-	}
-	.close-share {
-		padding: 10px 30px;
-		right: 50px;
-		margin-right: 0;
 	}
 	.share-container .share-icon {
 		margin-bottom: 40px;

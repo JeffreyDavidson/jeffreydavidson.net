@@ -622,9 +622,6 @@ function initSolonick() {
         $(".soa").removeClass("soavis");
         ssb.removeClass("clshbt");
     }
-    $(".close-share").on("click", function () {
-        hideShare();
-    });
     ssb.on("click", function () {
 
         if (shrcn.hasClass("isShare")) showShare();
