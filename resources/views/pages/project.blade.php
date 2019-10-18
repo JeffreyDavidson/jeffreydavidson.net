@@ -10,7 +10,7 @@
             </div>
             <span>Scroll Down</span>
         </div>
-        <a href="{{ route('home') }}" class="single-page-fixed-row-link"><i class="fal fa-arrow-left"></i> <span>Back to home</span></a>
+        <a href="{{ route('portfolio') }}" class="single-page-fixed-row-link"><i class="fal fa-arrow-left"></i> <span>Back to portfolio</span></a>
     </div>
     <!-- section  -->
     <section class="no-padding dark-bg no-hidden">
