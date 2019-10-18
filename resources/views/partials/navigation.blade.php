@@ -32,11 +32,11 @@
     <div class="nav-inner-wrap">
         <nav class="nav-inner sound-nav" id="menu">
             <ul>
-                <li><a href="{{ route('home') }}" class="act-link">Home</a></li>
+                <li><a href="{{ route('home') }}" {{ Request::routeIs('home') ? 'class=act-link' : '' }}>Home</a></li>
                 @if($projectsCount > 0)
-                    <li><a href="{{ route('portfolio') }}" class="act-link">Projects</a></li>
+                    <li><a href="{{ route('portfolio') }}" {{ Request::routeIs('portfolio') ? 'class=act-link' : '' }}>Portfolio</a></li>
                 @endif
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li><a href="{{ route('contact') }}" {{ Request::routeIs('contact') ? 'class=act-link' : '' }}>Contact</a></li>
             </ul>
         </nav>
     </div>
