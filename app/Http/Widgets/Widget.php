@@ -46,6 +46,10 @@ abstract class Widget
         }
 
         foreach ((new ReflectionClass($this))->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+            if ($method->isConstructor()) {
+                continue;
+            }
+
             if (!in_array($name = $method->getName(), ['loadView', 'view'])) {
                 $viewData[$name] = $this->$name();
             }
