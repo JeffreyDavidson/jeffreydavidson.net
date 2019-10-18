@@ -92,4 +92,15 @@ class Project extends Model
             ->latest()
             ->first();
     }
+
+    /**
+     * Scope a query to only include featured projects.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
+    }
 }
