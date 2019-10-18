@@ -66,7 +66,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <ul>
-                                        <li><span>Date :</span> {{ $project->completed_at->toDateString() }} </li>
+                                        <li>
+                                            <span>CompletionDate :</span> 
+                                            @isset($project->completed_at)
+                                                {{ $project->completed_at->toDateString() }} 
+                                            @else
+                                                {{ 'Current Project' }}
+                                            @endisset
+                                        </li>
                                         @isset($project->client)
                                             <li><span>Client :</span>  {{ $project->client->name }} </li>
                                         @endisset
