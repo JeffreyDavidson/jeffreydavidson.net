@@ -38,6 +38,8 @@
 
     @widget('FeaturedProjects')
 
+    @widget('RecentPosts')
+
     @include('pages.partials.home-video-presentation')
 
     @include('pages.partials.home-workflow')
