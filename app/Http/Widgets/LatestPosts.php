@@ -4,10 +4,10 @@ namespace App\Http\Widgets;
 
 use App\Models\Post;
 
-class RecentPosts extends Widget
+class LatestPosts extends Widget
 {
     /** @var $title */
-    public $title = 'My Recent Posts';
+    public $title = 'Latest Posts';
 
     /**
      * Undocumented function
@@ -16,6 +16,6 @@ class RecentPosts extends Widget
      */
     public function posts()
     {
-        return Post::recent()->take(3)->get();
+        return Post::latest('published_at')->take(5)->get();
     }
 }
