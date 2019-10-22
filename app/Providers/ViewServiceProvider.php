@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Project;
+use App\Models\Post;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -31,6 +32,7 @@ class ViewServiceProvider extends ServiceProvider
          */
         View::composer('*', function ($view) {
             $view->with('projectsCount', Project::count());
+            $view->with('postsCount', Post::count());
         });
     }
 }
