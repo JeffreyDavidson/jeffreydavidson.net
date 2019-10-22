@@ -1,5 +1,5 @@
 <!-- section-->
-<section  data-scrollax-parent="true" id="sec7">
+<section  data-scrollax-parent="true" id="sec5">
     <div class="section-subtitle"  data-scrollax="properties: { translateY: '-250px' }"><span>//</span>Blog</div>
     <div class="container">
         <!-- section-title -->
@@ -7,44 +7,25 @@
             <h2>{{ $title }}</h2>
         </div>
         <!-- section-title end -->
-        <!--process-wrap  -->
         <div class="process-wrap fl-wrap">
-            <ul>
-                <li>
-                    <div class="time-line-icon">
-                        <i class="fab fa-slideshare"></i>
+            @foreach($posts as $post)
+                <div class="col-md-4">
+                    <div class="post-body">
+                        <div class="category">{{ $post->categories->implode('name', ', ') }}</div>
+                        <div class="post-image">
+                            <img src="{{ $post->thumbnail->path }}" />                            
+                        </div>
+                        <div class="post-info">
+                            <div class="post-date">{{ $post->published_at->toDateString() }}</div>
+                            <a href="#">
+                                <h3>{{ $post->title }}</h3>
+                            </a>
+                        </div>
                     </div>
-                    <h4>Discuss the project</h4>
-                    <div class="process-details">
-                        <h6>Meet up for a cup of coffee or a phone call</h6>
-                        <p>Lets discuss all of your ideas for your project and how you want the website or application to function, what features you would like, and design ideas.</p>
-                    </div>
-                    <span class="process-numder">01.</span>
-                </li>
-                <li>
-                    <div class="time-line-icon">
-                        <i class="fal fa-laptop"></i>
-                    </div>
-                    <h4>Develop & elaborate</h4>
-                    <div class="process-details">
-                        <h6>Getting down to business</h6>
-                        <p>This is where I will start your project and keep you involved throughout the entire development of your project.</p>
-                    </div>
-                    <span class="process-numder">02.</span>
-                </li>
-                <li>
-                    <div class="time-line-icon">
-                        <i class="fal fa-flag-checkered"></i>
-                    </div>
-                    <h4>Final approval</h4>
-                    <div class="process-details">
-                        <h6>Lets get this LIVE</h6>
-                        <p>You can to look at the project in its final form to verify it meets your expectations. Once it has your approval we will push it live to the world.</p>
-                    </div>
-                    <span class="process-numder">03.</span>
-                </li>
-            </ul>
+                </div>
+            @endforeach
         </div>
+        <a href="{{ route('blog') }}" class="btn float-btn flat-btn color-btn mar-top">Blog</a>
     </div>
     <div class="bg-parallax-module" data-position-top="90"  data-position-left="30" data-scrollax="properties: { translateY: '-150px' }"></div>
     <div class="bg-parallax-module" data-position-top="80"  data-position-left="80" data-scrollax="properties: { translateY: '350px' }"></div>
