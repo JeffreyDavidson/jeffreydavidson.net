@@ -93,4 +93,15 @@ class Post extends Model
             ->latest()
             ->first();
     }
+
+    /**
+     * Scope a query to only include featured projects.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeRecent($query)
+    {
+        return $query->orderByDesc('published_at');
+    }
 }
