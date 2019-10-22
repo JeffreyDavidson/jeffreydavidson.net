@@ -36,6 +36,9 @@
                 @if($projectsCount > 0)
                     <li><a href="{{ route('portfolio') }}" {{ Request::routeIs('portfolio') ? 'class=act-link' : '' }}>Portfolio</a></li>
                 @endif
+                @if($postsCount > 0)
+                    <li><a href="{{ route('blog') }}" {{ Request::routeIs('blog') ? 'class=act-link' : '' }}>Blog</a></li>
+                @endif
                 <li><a href="{{ route('contact') }}" {{ Request::routeIs('contact') ? 'class=act-link' : '' }}>Contact</a></li>
             </ul>
         </nav>

@@ -16,3 +16,7 @@ Route::get('portfolio', 'ProjectsController@index')->name('portfolio');
 Route::get('project/{project}', 'ProjectsController@show')->name('project');
 Route::get('contact', 'ContactController@show')->name('contact');
 Route::post('contact', 'ContactController@store')->name('contact.store');
+Route::get('blog', 'PostsController@index')->name('blog');
+Route::get('blog/categories/{category}', 'PostCategoriesController@show')->name('category');
+Route::get('blog/tags/{tag}', 'PostTagsController@show')->name('tag');
+Route::get('blog/{post}', 'PostsController@show')->name('post');

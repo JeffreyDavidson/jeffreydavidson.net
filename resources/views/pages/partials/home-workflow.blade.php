@@ -1,5 +1,5 @@
 <!-- section-->
-<section  data-scrollax-parent="true" id="sec7">
+<section  data-scrollax-parent="true" id="sec6">
     <div class="section-subtitle"  data-scrollax="properties: { translateY: '-250px' }"><span>//</span>How I Work</div>
     <div class="container">
         <!-- section-title -->
