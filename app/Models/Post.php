@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Post extends Model
 {
@@ -103,5 +104,18 @@ class Post extends Model
     public function scopeRecent($query)
     {
         return $query->orderByDesc('published_at');
+    }
+
+    /**
+     * Scope a query to only include posts in a specific category.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeHasCategory($query, $category)
+    {
+        return $query->whereHas('categories', function (Builder $query) use ($category) {
+            $query->where('category_id', '=', $category->id);
+        });
     }
 }
