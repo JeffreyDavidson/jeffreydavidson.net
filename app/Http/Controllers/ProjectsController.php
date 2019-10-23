@@ -8,7 +8,9 @@ use App\Models\ProjectCategory;
 class ProjectsController extends Controller
 {
     /**
-     * 
+     * Display a listing of the projects.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -18,6 +20,12 @@ class ProjectsController extends Controller
         return view('pages.portfolio', compact('projects', 'projectCategories'));
     }
 
+    /**
+     * Show the given project.
+     *
+     * @param  App\Models\PostCategory $category
+     * @return \Illuminate\Http\Response
+     */
     public function show(Project $project)
     {
         return view('pages.project', compact('project'))

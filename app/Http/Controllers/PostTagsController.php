@@ -8,7 +8,10 @@ use App\Models\PostTag;
 class PostTagsController extends Controller
 {
     /**
-     * 
+     * Show the given post tag posts.
+     *
+     * @param  App\Models\PostTag $tag
+     * @return \Illuminate\Http\Response
      */
     public function show(PostTag $tag)
     {

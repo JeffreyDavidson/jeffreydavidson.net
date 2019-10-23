@@ -8,7 +8,9 @@ use App\Models\PostCategory;
 class PostCategoriesController extends Controller
 {
     /**
-     * 
+     * Show the given post category posts.
+     *
+     * @param Ap\Models\PostCategory $category
      */
     public function show(PostCategory $category)
     {

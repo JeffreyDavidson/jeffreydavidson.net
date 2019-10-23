@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     /**
-     * 
+     * Display a listing of the posts.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
@@ -21,7 +24,10 @@ class PostsController extends Controller
     }
 
     /**
-     * 
+     * Show the given post.
+     *
+     * @param  App\Models\Post $post
+     * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
     {
