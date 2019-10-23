@@ -101,6 +101,16 @@ class Project extends Model
     }
 
     /**
+     * Get the client that owns the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function client()
+    {
+        return $this->belongsTo(ProjectClient::class);
+    }
+
+    /**
      * Get the previous project of the current project.
      *
      * @return self|null
