@@ -8,16 +8,36 @@ use Illuminate\Database\Eloquent\Builder;
 
 class Post extends Model
 {
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
     protected $guarded = [];
 
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
     protected $appends = ['comments_count'];
 
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
     protected $dates = ['published_at'];
 
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
     public static function boot()
     {
         parent::boot();
-        
+
         static::creating(function($model)
         {
             $model->slug = Str::slug($model->title);
@@ -35,7 +55,9 @@ class Post extends Model
     }
 
     /**
-     * 
+     * The tags that belong to the post.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function tags()
     {
@@ -43,7 +65,9 @@ class Post extends Model
     }
 
     /**
-     * Get all of the attachmnets for the post.
+     * Get the attachments for the post.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function attachments()
     {
@@ -51,7 +75,9 @@ class Post extends Model
     }
 
     /**
-     * Get all of the thumbnail attachment for the post.
+     * Get the thumbnail record associated with the post.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function thumbnail()
     {
@@ -59,7 +85,9 @@ class Post extends Model
     }
 
     /**
-     * Get all of the attachmnets for the post.
+     * The categories that belong to the post.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function categories()
     {
@@ -67,18 +95,30 @@ class Post extends Model
     }
 
     /**
-     * Get all of the comments for the post.
+     * Get the comments for the post.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function comments()
     {
         return $this->hasMany(PostComment::class);
     }
 
+    /**
+     * Get the count of comments for the post.
+     *
+     * @return integer
+     */
     public function getCommentsCountAttribute()
     {
         return $this->comments->count();
     }
 
+    /**
+     * Get the previous post of the current post.
+     *
+     * @return self|null
+     */
     public function previousPost() : ?self
     {
         return (new self())
@@ -87,6 +127,11 @@ class Post extends Model
             ->first();
     }
 
+    /**
+     * Get the next post of the current post.
+     *
+     * @return self|null
+     */
     public function nextPost() : ?self
     {
         return (new self())

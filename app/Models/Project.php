@@ -18,19 +18,32 @@ class Project extends Model
         return 'slug';
     }
 
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
     public static function boot()
     {
         parent::boot();
 
-        static::creating(function ($model) {
+        static::creating(function ($model)
+        {
             $model->slug = Str::slug($model->name);
         });
     }
 
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
     protected $dates = ['completed_at'];
 
     /**
-     * Get all of the attachmnets for the project.
+     * Get the attachments for the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function attachments()
     {
@@ -38,7 +51,9 @@ class Project extends Model
     }
 
     /**
-     * Get the thumbnail attachment for the project.
+     * Get the thumbnail attachment associated with the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function thumbnail()
     {
@@ -46,7 +61,9 @@ class Project extends Model
     }
 
     /**
-     * Get the slider image for the project.
+     * Get the slider image associated with the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function slider()
     {
@@ -54,7 +71,9 @@ class Project extends Model
     }
 
     /**
-     * Get all of the attachment images that is not the slider image.
+     * Get the attachments that are not slider images.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function images()
     {
@@ -62,7 +81,9 @@ class Project extends Model
     }
 
     /**
-     * Get all of the categories for the project.
+     * The categories that belong to the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function categories()
     {
@@ -70,13 +91,20 @@ class Project extends Model
     }
 
     /**
-     * Get all of the attachmnets for the project.
+     * The skills that belong to the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function skills()
     {
         return $this->belongsToMany(ProjectSkill::class, 'project_skill', 'project_id', 'skill_id');
     }
 
+    /**
+     * Get the previous project of the current project.
+     *
+     * @return self|null
+     */
     public function previousProject(): ?self
     {
         return (new self())
@@ -85,6 +113,11 @@ class Project extends Model
             ->first();
     }
 
+    /**
+     * Get the next project of the current project.
+     *
+     * @return self|null
+     */
     public function nextProject(): ?self
     {
         return (new self())

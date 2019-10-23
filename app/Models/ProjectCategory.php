@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProjectCategory extends Model
 {
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
     public static function boot()
     {
         parent::boot();
@@ -18,7 +23,7 @@ class ProjectCategory extends Model
     }
 
     /**
-     * Get all of the posts that are assigned this category.
+     * The projects that belong to the project category.
      */
     public function projects()
     {
