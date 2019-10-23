@@ -13,9 +13,7 @@ class PostTagsController extends Controller
      */
     public function show(PostTag $tag)
     {
-        $posts = Post::whereHas('tags', function (Builder $query) use ($tag) {
-            $query->where('tag_id', '=', $tag->id);
-        })->paginate(5);
+        $posts = Post::hasTag($tag)->paginate(5);
 
         return view('pages.blog', compact('posts'));
     }

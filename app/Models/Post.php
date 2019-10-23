@@ -118,4 +118,17 @@ class Post extends Model
             $query->where('category_id', '=', $category->id);
         });
     }
+
+    /**
+     * Scope a query to only include posts with a specific tag.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeHasTag($query, $tag)
+    {
+        return $query->whereHas('tags', function (Builder $query) use ($tag) {
+            $query->where('tag_id', '=', $tag->id);
+        });
+    }
 }
