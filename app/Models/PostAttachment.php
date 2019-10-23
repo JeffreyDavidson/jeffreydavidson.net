@@ -14,7 +14,7 @@ class PostAttachment extends Model
     protected $guarded = [];
 
     /**
-     * Get the post that ownes the post attachment.
+     * Get the post that owns the post attachment.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

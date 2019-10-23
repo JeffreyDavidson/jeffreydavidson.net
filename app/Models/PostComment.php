@@ -14,7 +14,7 @@ class PostComment extends Model
     protected $guarded = [];
 
     /**
-     * Get the commentor that ownes the post comment.
+     * Get the commentor that owns the post comment.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -24,7 +24,7 @@ class PostComment extends Model
     }
 
     /**
-     * Get the post that ownes the post comment.
+     * Get the post that owns the post comment.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
