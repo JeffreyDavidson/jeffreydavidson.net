@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\PostTag;
-use App\Models\PostCategory;
 use Illuminate\Http\Request;
-use Illuminate\Database\Eloquent\Builder;
 
 class PostsController extends Controller
 {
