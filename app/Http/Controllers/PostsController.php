@@ -12,14 +12,10 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
-        if ($request->input('searchQuery'))
-        {
-            $posts = Post::where('title', 'like', '%'.$request->input('searchQuery').'%')
-                        ->orWhere('body', 'like', '%'.$request->input('searchQuery').'%')
-                        ->paginate();
-        } else {
-            $posts = Post::paginate(5);
-        }
+        $posts = Post::when($request->has('searchQuery'), function ($query) use ($request) {
+            $query->where('title', 'like', '%' . $request->input('searchQuery') . '%')
+                ->orWhere('body', 'like', '%' . $request->input('searchQuery') . '%');
+        })->paginate(5);
 
         return view('pages.blog', compact('posts'));
     }
