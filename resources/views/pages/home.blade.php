@@ -15,7 +15,9 @@
             <li><a class="scroll-link" href="#sec2">About</a></li>
             <li><a class="scroll-link" href="#sec3">Resume</a></li>
             <li><a class="scroll-link" href="#sec4">Featured Projects</a></li>
-            <li><a class="scroll-link" href="#sec5">Recent Posts</a></li>
+            @if($postsCount)
+                <li><a class="scroll-link" href="#sec5">Recent Posts</a></li>
+            @endif
             <li><a class="scroll-link" href="#sec6">How I Work</a></li>
         </ul>
     </nav>
@@ -39,9 +41,10 @@
 
     @widget('FeaturedProjects')
 
-    @widget('RecentPosts')
-
-    @include('pages.partials.home-video-presentation')
+    @if($postsCount > 0)
+        @widget('RecentPosts')
+        @include('pages.partials.home-video-presentation')
+    @endif
 
     @include('pages.partials.home-workflow')
 
