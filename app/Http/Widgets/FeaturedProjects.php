@@ -10,9 +10,9 @@ class FeaturedProjects extends Widget
     public $title = 'My Featured Projects';
 
     /**
-     * Undocumented function
+     * Retrieve a collection of featured projects.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function featuredProjects()
     {

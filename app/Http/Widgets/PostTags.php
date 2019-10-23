@@ -10,9 +10,9 @@ class PostTags extends Widget
     public $title = 'Tags';
 
     /**
-     * Undocumented function
+     * Retrieve a collection of post tags.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function tags()
     {

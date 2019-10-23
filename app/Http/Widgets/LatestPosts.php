@@ -10,9 +10,9 @@ class LatestPosts extends Widget
     public $title = 'Latest Posts';
 
     /**
-     * Undocumented function
+     * Retrieve a collection of posts.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function posts()
     {

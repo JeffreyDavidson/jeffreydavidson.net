@@ -15,6 +15,11 @@ class Numbers extends Widget
     /** @var $weeksSinceStarted */
     private $weeksSinceStarted;
 
+    /**
+     * Create a new numbers widget instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->startDate = new Carbon('2000-01-01');

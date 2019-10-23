@@ -8,9 +8,9 @@ use App\Models\PostCategory;
 class BlogFilters extends Widget
 {
     /**
-     * Undocumented function
+     * Retrieve a collection of post tags.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function tags()
     {
@@ -18,9 +18,9 @@ class BlogFilters extends Widget
     }
 
     /**
-     * Undocumented function
+     * Retrieve a collection of post categories.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function categories()
     {

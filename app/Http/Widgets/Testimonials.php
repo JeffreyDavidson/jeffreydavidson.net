@@ -10,9 +10,9 @@ class Testimonials extends Widget
     public $title = 'My Testimonials';
 
     /**
-     * Undocumented function
+     * Retrieve a collection of testimonials.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function testimonials()
     {

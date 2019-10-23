@@ -10,9 +10,9 @@ class PostCategories extends Widget
     public $title = 'Categories';
 
     /**
-     * Undocumented function
+     * Retrieve a collection of post categories.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function categories()
     {
