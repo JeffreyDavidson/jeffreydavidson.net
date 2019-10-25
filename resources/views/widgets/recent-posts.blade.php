@@ -37,7 +37,7 @@
                                 <a href="{{ route('post', $post) }}" class="btn float-btn color-btn flat-btn">Read more </a>
                                 <ul class="post-counter">
                                     <li><i class="fa fa-eye"></i><span>{{ $post->reads_count }}</span></li>
-                                    <li><i class="fal fa-comments-alt"></i><span>{{ $post->comment_count }}</span></li>
+                                    <li><i class="fal fa-comments-alt"></i><span>{{ $post->comments_count }}</span></li>
                                 </ul>
                             </div>
                         </div>
