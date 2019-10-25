@@ -5,8 +5,8 @@
         <!-- section-title -->
         <div class="section-title fl-wrap">
             <h3>Journal</h3>
-            <h2>My  Last   <span>news</span></h2>
-            <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida.  </p>
+            <h2>My Latest <span>news</span></h2>
+            <p>I love writing about my passions, whether its about my career field, my day to day life, or just fatherhood.</p>
         </div>
         <!-- section-title end -->
         <!--article-wrap  -->
